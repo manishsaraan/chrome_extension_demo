@@ -19,8 +19,18 @@ $(function(){
 	//reset
 	$("#reset").click(function(){
 
-		//save goal to storage
-		chrome.storage.sync.set({total : 0});
-		close();
+		//save total to storage
+		chrome.storage.sync.set({total : 0},function(){
+			var opt = {
+				type: 'basic',
+				title : 'total reset!',
+				message : 'total has been reset back to 0',
+				iconUrl : 'icon.png'
+			};
+
+			//create notification
+			chrome.notifications.create('reset',opt,function(){ });
+		});
+		
 	});
 });
