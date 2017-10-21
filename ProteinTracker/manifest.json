@@ -1,0 +1,10 @@
+{
+	"manifest_version" : 2,
+	"name" : "Protein Tracker",
+	"description" : "Tracks a user's protein totals throughout a day.",
+	"version" : "0.1.0",
+	"browser_action" : {
+		"default_icon" : "icon.png",
+		"default_popup": "popup.html"
+	}
+}
