@@ -7,5 +7,20 @@
 		 "default_icon" : "icon.png",
 		 "default_title" : "Pluralsight Helper",
 		 "default_popup" : "popup.html"
-	}
+	},
+	"background" : {
+		"scripts" : ["eventPage.js"],
+		"persistent" : false
+	},
+	"content_scripts" : [
+		   {
+		   	  "matches" : ["https://*.pluralsight.com/*"],
+              "js" : ["pluralsight_cs.js","jquery-1.10.2.js"],
+              "css" : ["pluralsight_cs.css"]
+		   }
+	],
+	"permissions" : [
+      "tabs",
+      "https://*.pluralsight.com/*"
+	]
 }
