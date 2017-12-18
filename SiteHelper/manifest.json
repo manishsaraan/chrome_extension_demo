@@ -15,7 +15,7 @@
 	"content_scripts" : [
 		   {
 		   	  "matches" : ["https://*.pluralsight.com/*"],
-              "js" : ["pluralsight_cs.js","jquery-1.10.2.js"],
+              "js" : ["pluralsight_cs.js","jquery-1.10.2.js", "jquery.dataTables.min.js"],
               "css" : ["pluralsight_cs.css"]
 		   }
 	],
